@@ -25,7 +25,7 @@
         {{ showExplanation ? 'Скрыть' : 'Показать' }} ответ
       </button>
       <transition name="fade">
-        <p v-if="showExplanation" class="mt-6 p-5 rounded-lg border bg-blue-50 text-2xl leading-relaxed">
+        <p v-if="showExplanation" class="mt-6 p-5 rounded-lg border bg-blue-50 text-2xl leading-relaxed" style="white-space: pre-line;">
           {{ question.explanation }}
         </p>
       </transition>
@@ -33,7 +33,8 @@
 
     <div v-else-if="question.type === 'last'" class="mt-6 text-center">
       <img v-if="question.img" :src="question.img" alt="Завершающее изображение"
-        class="w-full h-full shadow-md mx-auto object-contain" />
+        class="w-full h-full shadow-md mx-auto object-contain mb-2" />
+        <a href="https://www.figma.com/design/qGDhl4j0NqLLz1n6FL2Lpf/blanko--Copy-?node-id=2031-3&t=hyVjaFBtLhxLpusl-0">figma</a>
     </div>
 
     <!-- Fallback для неизвестного типа вопроса -->

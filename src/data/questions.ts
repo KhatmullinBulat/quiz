@@ -306,7 +306,9 @@ export const questions: Question[] = [
     id: 31,
     type: 'choice',
     question: 'Что делает следующий мета-тег?',
-    code: '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+    code: `
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    `,
     lang: 'html',
     options: [
       'Устанавливает кодировку страницы',
@@ -382,9 +384,27 @@ export const questions: Question[] = [
   },
   {
     id: 38,
+    type: 'accordion',
+    question: "Что такое селекторы в CSS? Приведите примеры.",
+    explanation: `Селекторы определяют, к каким элементам применяются стили.  
+    Примеры:
+      - p — все <p>.  
+      - .class — элементы с классом class.  
+      - #id — элемент с id="id".  
+      - div p — все <p> внутри <div>.  `
+  },
+  {
+    id: 39,
+    type: "accordion",
+    question: "В чем разница между `margin` и `padding`?",
+    explanation: `- margin — внешний отступ (за пределами границы элемента).  
+    - padding — внутренний отступ (между границей и содержимым).`
+  },
+  {
+    id: 40,
     type: 'last',
     question: 'Интерактивное задание на 15 минут. Сверстайте только html следующей страницы',
-    explanation: ``,
+    explanation: `https://www.figma.com/design/qGDhl4j0NqLLz1n6FL2Lpf/blanko--Copy-?node-id=2031-3&t=hyVjaFBtLhxLpusl-0`,
     img: quizLast
   },
 ]
