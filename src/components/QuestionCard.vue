@@ -35,6 +35,7 @@
       <img v-if="question.img" :src="question.img" alt="Завершающее изображение"
         class="w-full h-full shadow-md mx-auto object-contain mb-2" />
         <a href="https://www.figma.com/design/qGDhl4j0NqLLz1n6FL2Lpf/blanko--Copy-?node-id=2031-3&t=hyVjaFBtLhxLpusl-0">figma</a>
+        <RouterLink :to="{name: 'my-code'}">Мое</RouterLink>
     </div>
 
     <!-- Fallback для неизвестного типа вопроса -->
@@ -55,6 +56,7 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import { questions, type Question } from '@/data/questions'
+import { RouterLink } from 'vue-router'
 
 const props = defineProps<{ question: Question }>()
 const emit = defineEmits(['next'])

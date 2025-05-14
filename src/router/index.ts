@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import QuizView from '@/views/QuizView.vue'
 import { questions } from '@/data/questions' // Import questions to get the first ID
+import MyDecision from '@/components/MyDecision.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,11 @@ const router = createRouter({
       component: QuizView,
       props: true // Pass route params as props (optional, we'll use useRoute)
     },
+    {
+      path: "/quiz/my",
+      name: "my-code",
+      component: MyDecision,
+    }
   ],
 })
 
