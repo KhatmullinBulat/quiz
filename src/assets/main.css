@@ -1,3 +1,149 @@
+/* src/assets/main.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Стили для подсветки кода Prism.js (выберите тему) */
+/* Например, Okaidia theme - одна из популярных темных тем */
+/* Можно скачать с сайта Prism.js или найти в node_modules/prismjs/themes/ */
+/* Для простоты, скопируем сюда стили или импортируем их */
+
+/* Общие стили для приложения */
+body {
+  @apply bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 antialiased;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif; /* Если используете Inter */
+}
+
+/* Стили для подсветки кода Prism.js (Okaidia theme - пример) */
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre-wrap; /* Изменено для переноса строк */
+	word-spacing: normal;
+	word-break: normal; /* Изменено для лучшего переноса */
+	word-wrap: break-word; /* Изменено для лучшего переноса */
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto; /* Оставляем auto для возможности скролла, если контент слишком широк */
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822; /* Цвет фона для блока кода */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/* Дополнительно для скроллбара в блоках кода */
+pre[class*="language-"]::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+pre[class*="language-"]::-webkit-scrollbar-track {
+  background: #2f302a;
+  border-radius: 0.3em;
+}
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background-color: #5f5f5f;
+  border-radius: 0.3em;
+}
